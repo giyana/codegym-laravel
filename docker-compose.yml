@@ -15,8 +15,8 @@ services:
       MYSQL_DATABASE: c9
       MYSQL_ROOT_PASSWORD: root
       TZ: Asia/Tokyo
-    volumes:
-      - ./docker/db/data:/var/lib/mysql
+    # volumes:
+    #   - ./docker/db/data:/var/lib/mysql
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     environment:
