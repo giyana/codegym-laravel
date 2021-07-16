@@ -45,6 +45,12 @@ Route::post('/books', function (Request $request) {
     return redirect('/');
 });
 
+//更新画面
+Route::post('/booksedit/{books}', function (Book $books) {
+    //{books}id値を取得=>Book $books id値の1レコード取得
+    return view('booksedit', ['book' => $books]);
+});
+
 /**
  * 本を削除 
  */
